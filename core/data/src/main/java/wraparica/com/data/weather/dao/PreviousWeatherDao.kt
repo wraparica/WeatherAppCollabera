@@ -14,6 +14,6 @@ interface PreviousWeatherDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(previousWeatherEntity: PreviousWeatherEntity): Long
 
-    @Query("SELECT * FROM previous_weather where userId = :userId")
+    @Query("SELECT * FROM previous_weather where userId = :userId Order by id desc")
     fun getPreviousWeather(userId: Int): Flow<List<PreviousWeatherEntity>>
 }

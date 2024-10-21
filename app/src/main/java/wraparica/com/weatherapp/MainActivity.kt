@@ -88,8 +88,8 @@ class MainActivity : ComponentActivity() {
             val locationRequest = LocationRequest.Builder(
                 Priority.PRIORITY_HIGH_ACCURACY, 100
             ).setWaitForAccurateLocation(false)
-                .setMinUpdateIntervalMillis(30000)
-                .setMaxUpdateDelayMillis(30000)
+                .setMinUpdateIntervalMillis(3000)
+                .setMaxUpdateDelayMillis(3000)
                 .build()
             if (ActivityCompat.checkSelfPermission(
                     this,
